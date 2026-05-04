@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panduan Hak Cipta Musik di YouTube</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #555;
+  --ink-muted: #888;
+  --paper: #faf8f4;
+  --paper-warm: #f2ede4;
+  --paper-card: #fff;
+  --accent: #2d5a3d;
+  --accent-light: #e8f0eb;
+  --accent-gold: #b8882a;
+  --accent-gold-light: #fdf3e0;
+  --accent-red: #8b3a3a;
+  --accent-red-light: #fbeaea;
+  --accent-purple: #4a3875;
+  --accent-purple-light: #eeebf7;
+  --border: #ddd8ce;
+  --radius: 4px;
+  --radius-lg: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,248,244,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+}
+.nav-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--accent); letter-spacing: 0.01em;
+}
+.nav-tabs {
+  display: flex; gap: 4px;
+}
+.nav-tab {
+  padding: 6px 14px;
+  border: none; background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; color: var(--ink-soft);
+  cursor: pointer; border-radius: var(--radius);
+  transition: all 0.2s;
+}
+.nav-tab:hover { background: var(--paper-warm); color: var(--ink); }
+.nav-tab.active { background: var(--accent); color: #fff; font-weight: 500; }
+
+/* HERO */
+.hero {
+  max-width: 900px; margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+  display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start;
+}
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); font-weight: 500; margin-bottom: 1rem;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px; line-height: 1.15; font-weight: 700;
+  color: var(--ink); margin-bottom: 1.25rem;
+}
+.hero-desc {
+  font-size: 15px; color: var(--ink-soft); line-height: 1.75;
+  margin-bottom: 1.5rem; max-width: 480px;
+}
+.hero-meta {
+  font-size: 12px; color: var(--ink-muted);
+  border-top: 1px solid var(--border); padding-top: 1rem;
+}
+.hero-stat-box {
+  background: var(--paper-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem; align-self: center;
+}
+.stat-item { margin-bottom: 1.25rem; }
+.stat-item:last-child { margin-bottom: 0; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; color: var(--accent); font-weight: 700; line-height: 1;
+}
+.stat-label { font-size: 12px; color: var(--ink-muted); margin-top: 2px; }
+.stat-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+/* MAIN */
+main { max-width: 900px; margin: 0 auto; padding: 0 2rem 4rem; }
+
+/* PANEL */
+.panel { display: none; animation: fadeIn 0.3s ease; }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* SECTION TITLE */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 600;
+  color: var(--ink); margin-bottom: 0.5rem;
+}
+.section-sub { font-size: 14px; color: var(--ink-soft); margin-bottom: 2rem; }
+
+/* CARDS */
+.cards { display: grid; gap: 1rem; }
+.card {
+  background: var(--paper-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.card-top { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.card-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.card-icon.green { background: var(--accent-light); }
+.card-icon.gold { background: var(--accent-gold-light); }
+.card-icon.red { background: var(--accent-red-light); }
+.card-icon.purple { background: var(--accent-purple-light); }
+.card-title { font-size: 15px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.card-tag { font-size: 11px; color: var(--ink-muted); }
+.card-body { font-size: 14px; color: var(--ink-soft); line-height: 1.75; }
+
+/* CHECKLIST */
+.checklist { list-style: none; margin-top: 1rem; }
+.check-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding: 10px 0; border-bottom: 1px solid var(--paper-warm);
+  font-size: 13.5px; color: var(--ink-soft); line-height: 1.65;
+}
+.check-item:last-child { border-bottom: none; }
+.check-dot {
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; flex-shrink: 0; margin-top: 1px;
+}
+.dot-yes { background: var(--accent-light); color: var(--accent); }
+.dot-no { background: var(--accent-red-light); color: var(--accent-red); }
+.dot-warn { background: var(--accent-gold-light); color: var(--accent-gold); }
+.pasal {
+  font-size: 11px; color: var(--accent-purple);
+  background: var(--accent-purple-light);
+  padding: 1px 7px; border-radius: 3px;
+  display: inline-block; margin-top: 4px;
+}
+
+/* CASE CARDS */
+.case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+.case-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+.case-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px;
+}
+.case-tag {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.05em;
+  text-transform: uppercase; margin-bottom: 8px;
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+}
+.tag-warn { background: var(--accent-gold-light); color: var(--accent-gold); }
+.tag-err { background: var(--accent-red-light); color: var(--accent-red); }
+.tag-ok { background: var(--accent-light); color: var(--accent); }
+.case-body { font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
+
+/* STEPS */
+.steps { display: grid; gap: 1rem; margin-top: 1rem; }
+.step {
+  display: flex; gap: 1rem; align-items: flex-start;
+  background: var(--paper-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+}
+.step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 600; flex-shrink: 0;
+}
+.step-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.step-desc { font-size: 13px; color: var(--ink-soft); line-height: 1.65; }
+
+/* JALUR */
+.jalur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.jalur-card {
+  background: var(--paper-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.25rem;
+  border-top: 3px solid transparent;
+}
+.jalur-card.green { border-top-color: var(--accent); }
+.jalur-card.purple { border-top-color: var(--accent-purple); }
+.jalur-card.gold { border-top-color: var(--accent-gold); }
+.jalur-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 700; line-height: 1; margin-bottom: 8px;
+}
+.jalur-card.green .jalur-num { color: var(--accent); }
+.jalur-card.purple .jalur-num { color: var(--accent-purple); }
+.jalur-card.gold .jalur-num { color: var(--accent-gold); }
+.jalur-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.jalur-desc { font-size: 12.5px; color: var(--ink-soft); line-height: 1.65; margin-bottom: 8px; }
+
+/* QUIZ */
+.quiz-wrap { max-width: 640px; }
+.quiz-progress-bar {
+  height: 3px; background: var(--paper-warm);
+  border-radius: 2px; margin-bottom: 2rem; overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%; background: var(--accent);
+  border-radius: 2px; transition: width 0.4s ease;
+}
+.quiz-meta { font-size: 12px; color: var(--ink-muted); margin-bottom: 1rem; }
+.quiz-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; line-height: 1.5; color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+.quiz-opts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.25rem; }
+.quiz-opt {
+  padding: 12px 16px; border-radius: var(--radius-lg);
+  border: 1px solid var(--border); font-size: 13.5px;
+  cursor: pointer; background: var(--paper-card);
+  color: var(--ink); text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.15s; line-height: 1.5;
+}
+.quiz-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-light); }
+.quiz-opt.correct { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+.quiz-opt.wrong { background: var(--accent-red-light); border-color: var(--accent-red); color: var(--accent-red); }
+.quiz-feedback {
+  padding: 12px 16px; border-radius: var(--radius-lg);
+  font-size: 13px; line-height: 1.65;
+  display: none; margin-bottom: 1rem;
+}
+.quiz-feedback.show { display: block; }
+.quiz-feedback.ok { background: var(--accent-light); color: var(--accent); border: 1px solid #b5d4b5; }
+.quiz-feedback.err { background: var(--accent-red-light); color: var(--accent-red); border: 1px solid #d4b5b5; }
+.quiz-next {
+  padding: 10px 24px; border-radius: var(--radius-lg);
+  border: 1px solid var(--border); font-size: 13px;
+  cursor: pointer; background: var(--paper-card);
+  color: var(--ink); font-family: 'DM Sans', sans-serif;
+  display: none; transition: all 0.2s;
+}
+.quiz-next.show { display: inline-block; }
+.quiz-next:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.score-wrap { text-align: center; padding: 3rem 2rem; }
+.score-circle {
+  width: 120px; height: 120px; border-radius: 50%;
+  border: 3px solid var(--accent);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+.score-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.score-of { font-size: 12px; color: var(--ink-muted); }
+.score-msg {
+  font-size: 15px; color: var(--ink-soft); line-height: 1.7;
+  max-width: 420px; margin: 0 auto 1.5rem;
+}
+.restart-btn {
+  padding: 10px 28px; border-radius: var(--radius-lg);
+  border: 1px solid var(--accent); font-size: 13px;
+  cursor: pointer; background: var(--accent);
+  color: #fff; font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+.restart-btn:hover { opacity: 0.85; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  font-size: 12px; color: var(--ink-muted);
+  line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-stat-box { display: none; }
+  .hero h1 { font-size: 28px; }
+  .case-grid { grid-template-columns: 1fr; }
+  .jalur-grid { grid-template-columns: 1fr; }
+  .nav-tabs { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Hak Cipta Musik</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showPanel('kreator', this)">Kreator konten</button>
+      <button class="nav-tab" onclick="showPanel('pencipta', this)">Pencipta lagu</button>
+      <button class="nav-tab" onclick="showPanel('jalur', this)">Jalur hukum</button>
+      <button class="nav-tab" onclick="showPanel('quiz', this)">Uji pemahaman</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="hero-eyebrow">Panduan Interaktif &middot; UU No. 28 Tahun 2014</div>
+    <h1>Hak Cipta Musik di Era Digital</h1>
+    <p class="hero-desc">Panduan praktis berbasis penelitian hukum untuk kreator konten YouTube, pencipta lagu, dan masyarakat umum dalam memahami hak dan kewajiban di era digital.</p>
+    <div class="hero-meta">
+      Berdasarkan skripsi: <em>"Perlindungan Hukum Terhadap Pemegang Hak Cipta dalam Pelanggaran Hak Cipta di Era Digital"</em><br>
+      Fakultas Hukum &bull; Universitas Muhammadiyah &bull; 2025<br>
+      Kasus: Hanin Dhiya &bull; Tri Suaka &bull; Gen Halilintar vs Nagaswara
+    </div>
+  </div>
+  <div class="hero-stat-box">
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Kasus nyata dianalisis</div>
+    </div>
+    <hr class="stat-divider">
+    <div class="stat-item">
+      <div class="stat-num">Rp300jt</div>
+      <div class="stat-label">Ganti rugi putusan MA (kasus Gen Halilintar)</div>
+    </div>
+    <hr class="stat-divider">
+    <div class="stat-item">
+      <div class="stat-num">2014</div>
+      <div class="stat-label">UU Hak Cipta yang berlaku</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- PANEL: KREATOR -->
+<div id="kreator" class="panel active">
+  <div class="section-title">Untuk kreator konten YouTube</div>
+  <p class="section-sub">Pahami kewajiban hukummu sebelum menggunakan lagu orang lain di kontenmu.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-top">
+        <div class="card-icon gold">✓</div>
+        <div>
+          <div class="card-title">Checklist wajib sebelum menggunakan lagu orang lain</div>
+          <div class="card-tag">Berlaku untuk semua konten yang dimonetisasi</div>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div>Sudah mendapat <strong>izin tertulis</strong> dari pencipta atau pemegang hak cipta — bukan hanya izin lisan atau lewat perantara. <br><span class="pasal">Pasal 80 ayat (1) UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div>Izin yang diperoleh secara eksplisit mencakup <strong>penggunaan komersial</strong> jika konten akan dimonetisasi. <br><span class="pasal">Pasal 9 ayat (2) UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div>Mencantumkan <strong>nama pencipta asli</strong> di deskripsi video. <br><span class="pasal">Pasal 5 ayat (1) UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-warn">!</span>
+          <div>Jika mengubah <strong>lirik atau aransemen</strong>, wajib ada izin khusus dari pencipta karena menyangkut hak moral. <br><span class="pasal">Pasal 5 ayat (1) huruf e UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-no">✗</span>
+          <div>Jangan mengandalkan <strong>Content ID</strong> sebagai pengganti izin — Content ID bukan bukti izin yang sah secara hukum.</div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-no">✗</span>
+          <div>Jangan mengunggah ulang video atau lagu orang lain meskipun tidak dimonetisasi tanpa izin dari pemiliknya.</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <p style="font-size:13px;color:var(--ink-muted);margin-bottom:1rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;">Pelajaran dari kasus nyata</p>
+  <div class="case-grid">
+    <div class="case-card">
+      <span class="case-tag tag-warn">Ketidaktahuan</span>
+      <div class="case-name">Kasus Hanin Dhiya</div>
+      <div class="case-body">Meng-cover lagu "Akad" Payung Teduh dan memonetisasinya. Izin disampaikan secara informal melalui perantara tanpa perjanjian tertulis. <strong>Pelajaran:</strong> niat baik tanpa prosedur hukum yang benar tidak memiliki kekuatan hukum.</div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag tag-err">Pengabaian berulang</span>
+      <div class="case-name">Kasus Tri Suaka</div>
+      <div class="case-body">Meng-cover puluhan lagu tanpa izin dan memonetisasinya. Ketika pencipta menghubungi manajemen, tidak ada respons. Berujung somasi Rp1 miliar per unggahan. <strong>Pelajaran:</strong> mengabaikan pencipta yang menghubungimu bisa berujung tuntutan besar.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PANEL: PENCIPTA -->
+<div id="pencipta" class="panel">
+  <div class="section-title">Untuk pencipta lagu & pemegang hak cipta</div>
+  <p class="section-sub">Ketahui hak-hakmu dan langkah yang harus diambil jika karyamu digunakan tanpa izin.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-top">
+        <div class="card-icon green">♪</div>
+        <div>
+          <div class="card-title">Hak yang melekat pada karyamu sejak karya diciptakan</div>
+          <div class="card-tag">Berlaku otomatis tanpa perlu pendaftaran</div>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div><strong>Hak moral</strong> — melekat abadi, tidak bisa dialihkan. Meliputi hak atas nama, hak menolak perubahan karya, dan hak mempertahankan integritas karya. <br><span class="pasal">Pasal 5 UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div><strong>Hak ekonomi</strong> — hak mendapat manfaat finansial atas setiap penggunaan karyamu secara komersial. Bisa dialihkan kepada pihak lain. <br><span class="pasal">Pasal 8–9 UUHC</span></div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div>Kamu berhak <strong>menolak penggunaan karyamu</strong> meskipun alasannya bersifat personal — seperti yang dilakukan keluarga almarhum Pak Kasur terhadap Jeje.</div>
+        </li>
+        <li class="check-item">
+          <span class="check-dot dot-yes">✓</span>
+          <div>Kamu berhak menuntut <strong>ganti rugi</strong> melalui Pengadilan Niaga jika hak ekonomimu dilanggar. <br><span class="pasal">Pasal 96–99 UUHC</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+  <p style="font-size:13px;color:var(--ink-muted);margin-bottom:1rem;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;">Langkah yang harus ditempuh jika karyamu dilanggar</p>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div><div class="step-title">Dokumentasikan bukti</div><div class="step-desc">Screenshot, link video, tanggal unggah, jumlah penonton, dan bukti monetisasi. Simpan semua bukti secara terstruktur.</div></div></div>
+    <div class="step"><div class="step-num">2</div><div><div class="step-title">Hubungi pelanggar secara langsung</div><div class="step-desc">Minta penjelasan dan catat semua komunikasi secara tertulis. Jangan hanya lisan.</div></div></div>
+    <div class="step"><div class="step-num">3</div><div><div class="step-title">Ajukan klaim Content ID</div><div class="step-desc">Jika karyamu sudah terdaftar di sistem Content ID YouTube, ajukan klaim untuk mengalihkan pendapatan konten ke akunmu.</div></div></div>
+    <div class="step"><div class="step-num">4</div><div><div class="step-title">Layangkan somasi formal</div><div class="step-desc">Jika tidak ada respons, tempuh somasi melalui pengacara atau LMK yang mewakili kepentinganmu.</div></div></div>
+    <div class="step"><div class="step-num">5</div><div><div class="step-title">Gugatan perdata ke Pengadilan Niaga</div><div class="step-desc">Jika somasi diabaikan, ajukan gugatan ganti rugi berdasarkan Pasal 99 UUHC. Sistem hukum Indonesia bisa melindungimu — terbukti dari kemenangan Nagaswara di tingkat PK Mahkamah Agung.</div></div></div>
+  </div>
+
+  <br>
+  <div class="case-card" style="border-color:var(--accent);">
+    <span class="case-tag tag-ok">Bukti nyata sistem hukum bekerja</span>
+    <div class="case-name">Kasus Nagaswara vs Gen Halilintar</div>
+    <div class="case-body">Nagaswara sempat kalah di Pengadilan Negeri Jakarta Pusat. Namun tidak menyerah — mengajukan Peninjauan Kembali ke Mahkamah Agung. Hasilnya: MA mengabulkan PK dan Gen Halilintar diwajibkan membayar ganti rugi <strong>Rp300 juta</strong>. Putusan No. 41 PK/Pdt.Sus-HKI/2021. Prosesnya panjang, tapi keadilan bisa diraih.</div>
+  </div>
+</div>
+
+<!-- PANEL: JALUR -->
+<div id="jalur" class="panel">
+  <div class="section-title">Jalur penyelesaian sengketa hak cipta</div>
+  <p class="section-sub">Tiga jalur yang tersedia ketika pelanggaran sudah terjadi.</p>
+
+  <div class="jalur-grid">
+    <div class="jalur-card green">
+      <div class="jalur-num">01</div>
+      <div class="jalur-title">Alternatif (APS)</div>
+      <div class="jalur-desc">Mediasi, negosiasi, atau arbitrase. Lebih cepat dan hemat biaya. Cocok untuk penyelesaian damai antara kedua pihak.</div>
+      <span class="pasal">Pasal 95 ayat (1) UUHC</span>
+    </div>
+    <div class="jalur-card purple">
+      <div class="jalur-num">02</div>
+      <div class="jalur-title">Perdata</div>
+      <div class="jalur-desc">Gugatan ganti rugi ke Pengadilan Niaga. Fokus pada pemulihan hak dan kompensasi finansial bagi pemegang hak cipta.</div>
+      <span class="pasal">Pasal 96–99 UUHC</span>
+    </div>
+    <div class="jalur-card gold">
+      <div class="jalur-num">03</div>
+      <div class="jalur-title">Pidana</div>
+      <div class="jalur-desc">Ancaman penjara maks. 4 tahun dan denda maks. Rp1 miliar untuk pelanggaran hak ekonomi yang dilakukan secara komersial.</div>
+      <span class="pasal">Pasal 113 UUHC</span>
+    </div>
+  </div>
+
+  <br>
+  <div class="card" style="margin-top:0;">
+    <div class="card-title" style="margin-bottom:1rem;">Urutan yang disarankan</div>
+    <ul class="checklist">
+      <li class="check-item"><span class="check-dot dot-yes">1</span><div>Mulai dari <strong>komunikasi langsung dan negosiasi</strong> — paling cepat dan tidak menguras energi.</div></li>
+      <li class="check-item"><span class="check-dot dot-yes">2</span><div>Jika gagal, tempuh <strong>mediasi formal</strong> melalui lembaga resmi atau LMK.</div></li>
+      <li class="check-item"><span class="check-dot dot-yes">3</span><div>Jika masih gagal, ajukan <strong>gugatan perdata</strong> ke Pengadilan Niaga untuk mendapat ganti rugi.</div></li>
+      <li class="check-item"><span class="check-dot dot-warn">!</span><div>Jalur pidana umumnya ditempuh bersamaan dengan perdata, bukan sebagai pengganti.</div></li>
+      <li class="check-item"><span class="check-dot dot-warn">!</span><div>Jangan lupa <strong>dokumentasikan semua bukti</strong> sejak awal — ini kunci keberhasilan gugatan perdata.</div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- PANEL: QUIZ -->
+<div id="quiz" class="panel">
+  <div class="section-title">Uji pemahamanmu</div>
+  <p class="section-sub">5 pertanyaan berbasis kasus nyata dari penelitian ini.</p>
+
+  <div class="quiz-wrap">
+    <div id="quiz-main">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="prog-fill" style="width:0%"></div></div>
+      <div class="quiz-meta" id="quiz-meta">Pertanyaan 1 dari 5</div>
+      <div class="quiz-q" id="quiz-q"></div>
+      <div class="quiz-opts" id="quiz-opts"></div>
+      <div class="quiz-feedback" id="quiz-fb"></div>
+      <button class="quiz-next" id="quiz-next" onclick="nextQ()">Pertanyaan berikutnya →</button>
+    </div>
+    <div class="score-wrap" id="score-wrap" style="display:none">
+      <div class="score-circle">
+        <div class="score-big" id="score-big"></div>
+        <div class="score-of">dari 5</div>
+      </div>
+      <div class="score-msg" id="score-msg"></div>
+      <button class="restart-btn" onclick="restartQuiz()">Ulangi kuis</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  Panduan ini disusun berdasarkan penelitian skripsi<br>
+  <strong>"Perlindungan Hukum Terhadap Pemegang Hak Cipta dalam Pelanggaran Hak Cipta di Era Digital"</strong><br>
+  Fakultas Hukum &bull; Universitas Muhammadiyah &bull; 2025<br>
+  Mengacu pada UU No. 28 Tahun 2014 tentang Hak Cipta &bull; Analisis kasus: Hanin Dhiya, Tri Suaka, Gen Halilintar vs Nagaswara
+</footer>
+
+<script>
+const Qs = [
+  {
+    q: "Hanin Dhiya menyampaikan izin kepada Payung Teduh melalui perantara secara lisan sebelum meng-cover lagu 'Akad'. Apakah ini sudah cukup secara hukum?",
+    opts: ["Ya, yang penting ada itikad baik untuk meminta izin","Tidak, izin harus dibuat secara tertulis dan ditandatangani","Ya, selama tidak dimonetisasi","Tergantung kesepakatan kedua belah pihak"],
+    ans: 1,
+    ok: "Benar! Pasal 80 ayat (1) UU Hak Cipta menyatakan perjanjian lisensi harus dibuat secara tertulis dan ditandatangani oleh para pihak. Izin lisan tidak memiliki kekuatan hukum.",
+    err: "Kurang tepat. Pasal 80 ayat (1) UUHC menyatakan bahwa perjanjian lisensi harus dibuat secara tertulis dan ditandatangani. Izin lisan tidak cukup secara hukum meskipun ada itikad baik."
+  },
+  {
+    q: "YouTube tidak mendeteksi lagu berhak cipta dalam sebuah video vlog yang dimonetisasi melalui Content ID. Apakah kreator tersebut aman dari tuntutan hukum?",
+    opts: ["Ya, karena Content ID tidak mendeteksinya berarti tidak ada pelanggaran","Tidak, Content ID bukan pengganti izin — pelanggaran tetap terjadi meski tidak terdeteksi","Ya, selama kreator mencantumkan nama pencipta di deskripsi","Tergantung apakah pencipta lagu tahu atau tidak"],
+    ans: 1,
+    ok: "Benar! Content ID hanyalah mekanisme teknis deteksi, bukan bukti izin yang sah. Meskipun tidak terdeteksi, kewajiban perizinan tetap berlaku dan pencipta tetap berhak menuntut.",
+    err: "Kurang tepat. Content ID bukan pengganti izin — ini hanya sistem deteksi teknis. Pelanggaran hak cipta tetap terjadi meskipun sistem tidak mendeteksinya."
+  },
+  {
+    q: "Keluarga almarhum Pak Kasur menolak izin penggunaan lirik asli 'Lihat Kebunku' oleh Jeje. Hak apa yang dilindungi dalam keputusan keluarga tersebut?",
+    opts: ["Hak ekonomi, karena mereka ingin mendapat royalti","Hak moral, karena pencipta berhak menolak penggunaan karyanya meskipun alasannya personal","Keduanya, hak moral dan hak ekonomi","Tidak ada, karena almarhum Pak Kasur sudah meninggal"],
+    ans: 1,
+    ok: "Benar! Hak moral bersifat abadi dan dapat diwariskan. Keluarga pencipta berhak menolak penggunaan karya atas dasar hak moral, bahkan tanpa alasan komersial. Diatur dalam Pasal 5 UUHC.",
+    err: "Kurang tepat. Yang paling tepat adalah hak moral. Hak moral bersifat abadi, dapat diwariskan, dan memberi hak menolak perubahan atau penggunaan karya bahkan tanpa alasan ekonomi."
+  },
+  {
+    q: "Nagaswara kalah di Pengadilan Negeri Jakarta Pusat dalam kasus Gen Halilintar. Langkah apa yang ditempuh hingga akhirnya menang?",
+    opts: ["Mengajukan banding ke Pengadilan Tinggi","Mengajukan kasasi ke Mahkamah Agung","Mengajukan Peninjauan Kembali ke Mahkamah Agung","Menempuh jalur pidana di kepolisian"],
+    ans: 2,
+    ok: "Benar! Nagaswara mengajukan Peninjauan Kembali (PK) ke Mahkamah Agung dengan putusan nomor 41 PK/Pdt.Sus-HKI/2021, yang mewajibkan Gen Halilintar membayar ganti rugi Rp300 juta.",
+    err: "Kurang tepat. Nagaswara mengajukan Peninjauan Kembali (PK) ke Mahkamah Agung — bukan banding atau kasasi. Hasilnya, MA mengabulkan PK dan Gen Halilintar diwajibkan membayar Rp300 juta."
+  },
+  {
+    q: "Tri Suaka meng-cover lagu tanpa izin dan memonetisasinya. Pencipta sudah menghubungi manajemen tapi tidak ada respons. Apa langkah hukum yang paling tepat selanjutnya?",
+    opts: ["Langsung melaporkan ke polisi karena sudah ada pelanggaran pidana","Melayangkan somasi formal dan jika tidak ditanggapi, mengajukan gugatan perdata ke Pengadilan Niaga","Cukup melapor ke YouTube untuk take down kontennya","Menunggu sampai Tri Suaka menghubungi terlebih dahulu"],
+    ans: 1,
+    ok: "Benar! Urutan yang tepat: dokumentasi bukti → komunikasi langsung → somasi formal → gugatan perdata ke Pengadilan Niaga jika somasi diabaikan. Jalur perdata berfokus pada ganti rugi.",
+    err: "Kurang tepat. Langkah yang paling tepat adalah melayangkan somasi formal, dan jika tidak ditanggapi, mengajukan gugatan perdata ke Pengadilan Niaga berdasarkan Pasal 99 UUHC."
+  }
+];
+
+let cur = 0, score = 0, answered = false;
+
+function loadQ() {
+  const q = Qs[cur];
+  const pct = Math.round((cur / Qs.length) * 100);
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('quiz-meta').textContent = 'Pertanyaan ' + (cur+1) + ' dari ' + Qs.length;
+  document.getElementById('quiz-q').textContent = q.q;
+  const opts = document.getElementById('quiz-opts');
+  opts.innerHTML = '';
+  q.opts.forEach((o, i) => {
+    const b = document.createElement('button');
+    b.className = 'quiz-opt'; b.textContent = o;
+    b.onclick = () => answer(i);
+    opts.appendChild(b);
+  });
+  const fb = document.getElementById('quiz-fb');
+  fb.className = 'quiz-feedback'; fb.textContent = '';
+  document.getElementById('quiz-next').className = 'quiz-next';
+  answered = false;
+}
+
+function answer(idx) {
+  if (answered) return;
+  answered = true;
+  const q = Qs[cur];
+  const opts = document.querySelectorAll('.quiz-opt');
+  const fb = document.getElementById('quiz-fb');
+  const nb = document.getElementById('quiz-next');
+  opts.forEach((o, i) => {
+    o.disabled = true;
+    if (i === q.ans) o.classList.add('correct');
+    else if (i === idx) o.classList.add('wrong');
+  });
+  if (idx === q.ans) {
+    score++;
+    fb.className = 'quiz-feedback ok show';
+    fb.textContent = q.ok;
+  } else {
+    fb.className = 'quiz-feedback err show';
+    fb.textContent = q.err;
+  }
+  nb.className = 'quiz-next show';
+  nb.textContent = cur < Qs.length - 1 ? 'Pertanyaan berikutnya →' : 'Lihat hasil →';
+}
+
+function nextQ() {
+  cur++;
+  if (cur >= Qs.length) showScore();
+  else loadQ();
+}
+
+function showScore() {
+  document.getElementById('prog-fill').style.width = '100%';
+  document.getElementById('quiz-main').style.display = 'none';
+  document.getElementById('score-wrap').style.display = 'block';
+  document.getElementById('score-big').textContent = score;
+  let msg = '';
+  if (score === 5) msg = 'Luar biasa! Kamu memahami hak cipta musik di era digital dengan sangat baik. Pengetahuan ini penting untuk melindungi dirimu dan menghormati hak pencipta lain.';
+  else if (score >= 3) msg = 'Cukup baik! Kamu sudah memahami sebagian besar konsep dasar hak cipta. Baca ulang bagian yang masih keliru untuk memperkuat pemahamanmu.';
+  else msg = 'Masih perlu belajar lebih. Yuk baca ulang panduan di tab "Kreator konten" dan "Jalur hukum" untuk memahami hak dan kewajiban hak cipta musik di YouTube.';
+  document.getElementById('score-msg').textContent = msg;
+}
+
+function restartQuiz() {
+  cur = 0; score = 0; answered = false;
+  document.getElementById('quiz-main').style.display = 'block';
+  document.getElementById('score-wrap').style.display = 'none';
+  loadQ();
+}
+
+function showPanel(id, el) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (el) el.classList.add('active');
+}
+
+loadQ();
+</script>
+</body>
+</html>
